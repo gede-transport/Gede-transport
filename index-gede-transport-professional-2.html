@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Gede Transport Bali - Sewa mobil plus driver, airport transfer, drop, tour travel dan perjalanan sembahyang.">
+<title>Gede Transport Bali | Car Rental with Driver</title>
+<style>
+:root{--dark:#0b1720;--green:#19a974;--gold:#f5b942;--light:#f5f8fa;--text:#18232b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--light);line-height:1.6}
+header{position:sticky;top:0;z-index:10;background:rgba(11,23,32,.96);color:white;box-shadow:0 3px 14px rgba(0,0,0,.15)}
+.nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.logo{font-size:22px;font-weight:800;letter-spacing:.5px}
+.logo span{color:var(--gold)}
+nav a{color:white;text-decoration:none;margin-left:18px;font-size:14px;font-weight:600}
+.lang{border:1px solid #ffffff55;background:#ffffff12;color:white;border-radius:20px;padding:7px 12px;cursor:pointer;margin-left:14px}
+.hero{background:linear-gradient(135deg,#0b1720 0%,#123b48 55%,#176b5b 100%);color:white;padding:78px 20px 70px}
+.hero-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:35px;align-items:center}
+.badge{display:inline-block;background:#ffffff16;border:1px solid #ffffff30;border-radius:30px;padding:8px 14px;margin-bottom:18px;color:#dfffee}
+h1{font-size:clamp(38px,6vw,68px);line-height:1.05;margin-bottom:18px}
+.hero p{font-size:19px;max-width:680px;color:#e7f2f4}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:13px 19px;border-radius:10px;text-decoration:none;font-weight:800}
+.primary{background:#19a974;color:white}
+.secondary{background:white;color:var(--dark)}
+.car-card{background:#ffffff12;border:1px solid #ffffff25;border-radius:24px;padding:30px;text-align:center}
+.car-icon{font-size:90px;margin-bottom:10px}
+.section{max-width:1100px;margin:auto;padding:70px 20px}
+.center{text-align:center}
+.kicker{color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:1.5px;font-size:13px}
+h2{font-size:36px;margin:8px 0 12px}
+.sub{color:#62717a;max-width:680px;margin:0 auto 35px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:white;border-radius:18px;padding:25px;box-shadow:0 8px 30px #10202b10;border:1px solid #e5ecef}
+.icon{font-size:34px;margin-bottom:10px}
+.card h3{margin-bottom:7px}
+.card p{color:#65737a;font-size:15px}
+.location{background:#eaf5f2}
+.location-box{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+.info{background:white;border-radius:18px;padding:28px;box-shadow:0 8px 30px #10202b10}
+.map{border-radius:18px;overflow:hidden;min-height:260px;background:#d7e8e5;display:flex;align-items:center;justify-content:center;text-align:center;padding:25px}
+.map a{color:var(--green);font-weight:800;text-decoration:none}
+.contact{background:var(--dark);color:white}
+.contact p{color:#cbd7db}
+.contact .btn{margin-top:20px}
+footer{background:#071017;color:#9eacb2;text-align:center;padding:25px 20px;font-size:13px}
+.float-wa{position:fixed;right:18px;bottom:18px;background:#25d366;color:white;text-decoration:none;border-radius:50px;padding:13px 17px;font-weight:800;box-shadow:0 7px 22px #0003;z-index:20}
+@media(max-width:800px){
+ .hero-inner,.location-box{grid-template-columns:1fr}
+ .grid{grid-template-columns:1fr}
+ nav a{display:none}
+ .hero{padding-top:55px}
+ .car-card{max-width:380px;margin:auto}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="logo">GEDE <span>TRANSPORT</span></div>
+    <div>
+      <nav style="display:inline">
+        <a href="#home" data-id="home">Beranda</a>
+        <a href="#services" data-id="services">Layanan</a>
+        <a href="#location" data-id="location">Lokasi</a>
+        <a href="#contact" data-id="contact">Kontak</a>
+      </nav>
+      <button class="lang" onclick="toggleLanguage()">🇬🇧 EN</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div>
+      <div class="badge" id="badge">🚗 Transportasi Bali • Buleleng & sekitarnya</div>
+      <h1 id="title">Perjalanan Nyaman,<br>Aman & Terpercaya.</h1>
+      <p id="intro">Gede Transport melayani sewa mobil plus driver untuk kebutuhan pribadi, keluarga, wisata, drop, tour travel, hingga perjalanan sembahyang.</p>
+      <div class="buttons">
+        <a class="btn primary" href="https://wa.me/62881037417775?text=Halo%20Gede%20Transport,%20saya%20ingin%20menanyakan%20sewa%20mobil." target="_blank" id="waBtn">💬 Pesan via WhatsApp</a>
+        <a class="btn secondary" href="#services" id="serviceBtn">Lihat Layanan</a>
+      </div>
+    </div>
+    <div class="car-card">
+      <div class="car-icon">🚙</div>
+      <h3 id="cardTitle">Siap Mengantar Tujuan Anda</h3>
+      <p id="cardText">Driver berpengalaman • Siap antar-jemput • Pelayanan ramah</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="center">
+    <div class="kicker" id="kicker">Layanan Kami</div>
+    <h2 id="servicesTitle">Transportasi sesuai kebutuhan Anda</h2>
+    <p class="sub" id="servicesSub">Pilih layanan yang Anda perlukan dan hubungi kami untuk informasi harga serta jadwal.</p>
+  </div>
+  <div class="grid">
+    <div class="card"><div class="icon">🚗</div><h3 id="s1">Sewa Mobil + Driver</h3><p id="p1">Mobil dengan driver untuk perjalanan pribadi, keluarga, bisnis, atau wisata di Bali.</p></div>
+    <div class="card"><div class="icon">✈️</div><h3 id="s2">Airport / Hotel Transfer</h3><p id="p2">Antar-jemput bandara, hotel, pelabuhan, dan berbagai tujuan di Bali.</p></div>
+    <div class="card"><div class="icon">🌴</div><h3 id="s3">Tour & Travel</h3><p id="p3">Perjalanan wisata Bali dengan driver yang membantu perjalanan Anda lebih nyaman.</p></div>
+    <div class="card"><div class="icon">📍</div><h3 id="s4">Drop / Antar Tujuan</h3><p id="p4">Layanan drop untuk berbagai tujuan dengan jadwal yang dapat disesuaikan.</p></div>
+    <div class="card"><div class="icon">🙏</div><h3 id="s5">Perjalanan Sembahyang</h3><p id="p5">Sewa kendaraan untuk perjalanan sembahyang dan kegiatan keluarga.</p></div>
+    <div class="card"><div class="icon">👨‍✈️</div><h3 id="s6">Driver Berpengalaman</h3><p id="p6">Pelayanan ramah, membantu rute perjalanan, dan mengutamakan kenyamanan penumpang.</p></div>
+  </div>
+</section>
+
+<section class="section location" id="location">
+  <div class="center">
+    <div class="kicker" id="locKicker">Lokasi</div>
+    <h2 id="locTitle">Bali, Buleleng</h2>
+    <p class="sub" id="locSub">Berbasis di Desa Bengkel, Kecamatan Busungbiu, Kabupaten Buleleng, Bali.</p>
+  </div>
+  <div class="location-box">
+    <div class="info">
+      <h3>📍 Gede Transport</h3>
+      <p style="margin-top:10px">Desa Bengkel<br>Kecamatan Busungbiu<br>Kabupaten Buleleng, Bali, Indonesia</p>
+      <a class="btn primary" style="margin-top:20px" href="https://www.google.com/maps/search/?api=1&query=Desa+Bengkel,+Busungbiu,+Buleleng,+Bali" target="_blank" id="mapBtn">📍 Buka Google Maps</a>
+    </div>
+    <div class="map">
+      <div>🌴<br><strong>Bali • Buleleng</strong><br><a href="https://www.google.com/maps/search/?api=1&query=Desa+Bengkel,+Busungbiu,+Buleleng,+Bali" target="_blank">Lihat lokasi di Google Maps →</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="center">
+    <div class="kicker" style="color:var(--gold)" id="contactKicker">Hubungi Kami</div>
+    <h2 id="contactTitle">Siap bepergian di Bali?</h2>
+    <p id="contactText">Tanyakan ketersediaan mobil, harga, rute, dan jadwal perjalanan melalui WhatsApp.</p>
+    <a class="btn primary" href="https://wa.me/62881037417775?text=Halo%20Gede%20Transport,%20saya%20ingin%20booking." target="_blank">💬 WhatsApp: 0881 0374 17775</a>
+  </div>
+</section>
+
+<footer>© 2026 Gede Transport Bali • Car Rental with Driver</footer>
+<a class="float-wa" href="https://wa.me/62881037417775?text=Halo%20Gede%20Transport" target="_blank">💬 WhatsApp</a>
+
+<script>
+let en=false;
+const id={
+home:"Beranda",services:"Layanan",location:"Lokasi",contact:"Kontak",
+badge:"🚗 Transportasi Bali • Buleleng & sekitarnya",
+title:"Perjalanan Nyaman,<br>Aman & Terpercaya.",
+intro:"Gede Transport melayani sewa mobil plus driver untuk kebutuhan pribadi, keluarga, wisata, drop, tour travel, hingga perjalanan sembahyang.",
+waBtn:"💬 Pesan via WhatsApp",serviceBtn:"Lihat Layanan",cardTitle:"Siap Mengantar Tujuan Anda",cardText:"Driver berpengalaman • Siap antar-jemput • Pelayanan ramah",
+kicker:"Layanan Kami",servicesTitle:"Transportasi sesuai kebutuhan Anda",servicesSub:"Pilih layanan yang Anda perlukan dan hubungi kami untuk informasi harga serta jadwal.",
+s1:"Sewa Mobil + Driver",p1:"Mobil dengan driver untuk perjalanan pribadi, keluarga, bisnis, atau wisata di Bali.",
+s2:"Airport / Hotel Transfer",p2:"Antar-jemput bandara, hotel, pelabuhan, dan berbagai tujuan di Bali.",
+s3:"Tour & Travel",p3:"Perjalanan wisata Bali dengan driver yang membantu perjalanan Anda lebih nyaman.",
+s4:"Drop / Antar Tujuan",p4:"Layanan drop untuk berbagai tujuan dengan jadwal yang dapat disesuaikan.",
+s5:"Perjalanan Sembahyang",p5:"Sewa kendaraan untuk perjalanan sembahyang dan kegiatan keluarga.",
+s6:"Driver Berpengalaman",p6:"Pelayanan ramah, membantu rute perjalanan, dan mengutamakan kenyamanan penumpang.",
+locKicker:"Lokasi",locTitle:"Bali, Buleleng",locSub:"Berbasis di Desa Bengkel, Kecamatan Busungbiu, Kabupaten Buleleng, Bali.",
+mapBtn:"📍 Buka Google Maps",contactKicker:"Hubungi Kami",contactTitle:"Siap bepergian di Bali?",contactText:"Tanyakan ketersediaan mobil, harga, rute, dan jadwal perjalanan melalui WhatsApp."
+};
+const enText={
+home:"Home",services:"Services",location:"Location",contact:"Contact",
+badge:"🚗 Bali Transportation • Buleleng & surrounding areas",
+title:"Comfortable,<br>Safe & Trusted Journeys.",
+intro:"Gede Transport provides car rental with driver for private trips, families, tourism, transfers, tours, and temple visits.",
+waBtn:"💬 Book via WhatsApp",serviceBtn:"Our Services",cardTitle:"Ready to Take You There",cardText:"Experienced driver • Pick-up & drop-off • Friendly service",
+kicker:"Our Services",servicesTitle:"Transportation for Your Needs",servicesSub:"Choose the service you need and contact us for prices and availability.",
+s1:"Car Rental + Driver",p1:"A car with driver for private, family, business, or sightseeing trips in Bali.",
+s2:"Airport / Hotel Transfer",p2:"Pick-up and drop-off from airports, hotels, ports, and destinations across Bali.",
+s3:"Tour & Travel",p3:"Explore Bali comfortably with a local driver to help make your trip easier.",
+s4:"Point-to-Point Transfer",p4:"Convenient transfers to your destination with flexible scheduling.",
+s5:"Temple / Religious Trips",p5:"Vehicle rental for temple visits and family religious activities.",
+s6:"Experienced Driver",p6:"Friendly service, route assistance, and a focus on passenger comfort.",
+locKicker:"Location",locTitle:"Bali, Buleleng",locSub:"Based in Bengkel Village, Busungbiu District, Buleleng Regency, Bali.",
+mapBtn:"📍 Open Google Maps",contactKicker:"Contact Us",contactTitle:"Ready to explore Bali?",contactText:"Ask us about vehicle availability, prices, routes, and schedules via WhatsApp."
+};
+function toggleLanguage(){
+ en=!en; const t=en?enText:id;
+ Object.keys(t).forEach(k=>{const el=document.getElementById(k);if(el)el.innerHTML=t[k]});
+ document.querySelectorAll("[data-id]").forEach(a=>a.innerHTML=t[a.dataset.id]);
+ document.querySelector(".lang").innerHTML=en?"🇮🇩 ID":"🇬🇧 EN";
+ document.documentElement.lang=en?"en":"id";
+}
+</script>
+</body>
+</html>
