@@ -272,7 +272,7 @@ h1{font-size:43px}
 <a class="wa" href="https://wa.me/62881037417775?text=Halo%20Gede%20Transport,%20saya%20ingin%20booking%20kendaraan." target="_blank" aria-label="WhatsApp">💬</a>
 
 <script>
-let english=false;
+let language="id";
 const idText={
 badge:"🚗 Nyaman • Aman • Terpercaya",
 heroTitle:"Perjalanan Nyaman, Aman & Terpercaya.",
@@ -311,13 +311,35 @@ locTitle:"Our Location",locText:"Bengkel Village, Busungbiu District, Buleleng R
 bookTitle:"Ready to Go?",bookText:"Fill in your trip details below. After sending, your booking details will open directly in WhatsApp.",
 nameLabel:"Name",serviceLabel:"Service",dateLabel:"Travel date",destLabel:"Destination",msgLabel:"Additional message",sendBtn:"💬 Send Booking via WhatsApp"
 };
+const frText={
+badge:"🚗 Confortable • Sûr • Fiable",
+heroTitle:"Gede Transport Munduk Bali",
+heroText:"Gede Transport vous accompagne pour vos voyages à Bali.",
+heroServices:"Voir nos services",
+serviceTitle:"Nos Services",
+serviceIntro:"Nous sommes prêts à vous accompagner pour un voyage confortable et sûr.",
+s1t:"Location de voiture avec chauffeur",
+s2t:"Transferts et navette",
+s3t:"Tourisme et voyages",
+s4t:"Visites de temples",
+fleetTitle:"Nos véhicules",
+fleetName:"Voiture Gede Transport",
+whyTitle:"Pourquoi choisir Gede Transport ?",
+w1t:"Chauffeur sympathique",
+w2t:"Prise en charge et dépose",
+w3t:"Réservation facile",
+locTitle:"Notre emplacement",
+bookTitle:"Prêt à partir ?",
+bookText:"Remplissez vos informations de voyage.",
+nameLabel:"Nom",
+serviceLabel:"Service"
 function applyLang(dict){
 for(const id in dict){const el=document.getElementById(id);if(el)el.textContent=dict[id]}
-document.querySelectorAll("[data-id]").forEach(a=>a.textContent=english?a.dataset.en:a.dataset.id);
-document.querySelector(".lang").textContent=english?"🇮🇩 Indonesia":"🇬🇧 English";
-document.documentElement.lang=english?"en":"id";
+document.querySelectorAll("[data-id]").forEach(a=>a.textContent=language==="fr"?(a.dataset.fr||a.dataset.id):language==="en"?(a.dataset.en||a.dataset.id):a.dataset.id);
+document.querySelector(".lang").textContent=language==="id"?"🇬🇧 English":language==="en"?"🇫🇷 Français":"🇮🇩 Indonesia";
+document.documentElement.lang=language;
 }
-function toggleLang(){english=!english;applyLang(english?enText:idText)}
+function toggleLang(){language=language==="id"?"en":language==="en"?"fr":"id";applyLang(language==="id"?idText:language==="en"?enText:frText)}
 function kirimWA(e){
 e.preventDefault();
 const nama=document.getElementById("nama").value;
