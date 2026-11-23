@@ -349,7 +349,15 @@ destLabel:"Destination",
 msgLabel:"Message supplémentaire",
 sendBtn:"💬 Envoyer la réservation via WhatsApp"
 };
-function toggleLang(){language=language==="id"?"en":language==="en"?"fr":"id";applyLang(language==="id"?idText:language==="en"?enText:frText)}
+ function applyLang(dict){
+for(const id in dict){
+const el=document.getElementById(id);
+if(el)el.textContent=dict[id];
+}
+document.querySelectorAll("[data-id]").forEach(a=>a.textContent=language==="fr"?(a.dataset.fr||a.dataset.id):language==="en"?(a.dataset.en||a.dataset.id):a.dataset.id);
+document.querySelector(".lang").textContent=language==="id"?"🇬🇧 English":language==="en"?"🇫🇷 Français":"🇮🇩 Indonesia";
+document.documentElement.lang=language;
+ } function toggleLang(){language=language==="id"?"en":language==="en"?"fr":"id";applyLang(language==="id"?idText:language==="en"?enText:frText)}
 function kirimWA(e){
 e.preventDefault();
 const nama=document.getElementById("nama").value;
