@@ -313,32 +313,42 @@ nameLabel:"Name",serviceLabel:"Service",dateLabel:"Travel date",destLabel:"Desti
 };
 const frText={
 badge:"🚗 Confortable • Sûr • Fiable",
-heroTitle:"Gede Transport Munduk Bali",
-heroText:"Gede Transport vous accompagne pour vos voyages à Bali.",
+heroTitle:"Voyage confortable, sûr et fiable.",
+heroText:"Gede Transport propose la location de voiture avec chauffeur pour les voyages privés, les familles, les excursions, les transferts et les visites de temples à Bali.",
 heroServices:"Voir nos services",
+caption:"Location de voiture avec chauffeur • Circuit à Bali • Transfert aéroport / hôtel",
 serviceTitle:"Nos Services",
-serviceIntro:"Nous sommes prêts à vous accompagner pour un voyage confortable et sûr.",
+serviceIntro:"Choisissez le service adapté à votre voyage et contactez-nous pour connaître les tarifs et les disponibilités.",
 s1t:"Location de voiture avec chauffeur",
-s2t:"Transferts et navette",
-s3t:"Tourisme et voyages",
+s1p:"Véhicules confortables avec chauffeur sympathique pour vos déplacements privés, familiaux ou professionnels.",
+s2t:"Transferts et navettes",
+s2p:"Transferts vers l'aéroport, les hôtels, les ports et toutes les destinations à Bali.",
+s3t:"Circuits et voyages",
+s3p:"Découvrez Bali avec un itinéraire adapté à vos envies.",
 s4t:"Visites de temples",
+s4p:"Transport pour les visites de temples et les cérémonies familiales.",
 fleetTitle:"Nos véhicules",
+fleetIntro:"Des véhicules propres et confortables avec chauffeur pour votre voyage à Bali.",
 fleetName:"Voiture Gede Transport",
+fleetText:"Prêt à vous accompagner partout à Bali.",
 whyTitle:"Pourquoi choisir Gede Transport ?",
 w1t:"Chauffeur sympathique",
+w1p:"Un service poli et une assistance tout au long de votre voyage.",
 w2t:"Prise en charge et dépose",
+w2p:"Les horaires et les destinations s'adaptent à vos besoins.",
 w3t:"Réservation facile",
+w3p:"Contactez-nous sur WhatsApp pour connaître les véhicules, les tarifs et les disponibilités.",
 locTitle:"Notre emplacement",
+locText:"Village de Bengkel, district de Busungbiu, régence de Buleleng, Bali",
 bookTitle:"Prêt à partir ?",
-bookText:"Remplissez vos informations de voyage.",
+bookText:"Remplissez les informations de votre voyage ci-dessous. Après l'envoi, votre réservation s'ouvrira directement sur WhatsApp.",
 nameLabel:"Nom",
-serviceLabel:"Service"
-function applyLang(dict){
-for(const id in dict){const el=document.getElementById(id);if(el)el.textContent=dict[id]}
-document.querySelectorAll("[data-id]").forEach(a=>a.textContent=language==="fr"?(a.dataset.fr||a.dataset.id):language==="en"?(a.dataset.en||a.dataset.id):a.dataset.id);
-document.querySelector(".lang").textContent=language==="id"?"🇬🇧 English":language==="en"?"🇫🇷 Français":"🇮🇩 Indonesia";
-document.documentElement.lang=language;
-}
+serviceLabel:"Type de service",
+dateLabel:"Date du voyage",
+destLabel:"Destination",
+msgLabel:"Message supplémentaire",
+sendBtn:"💬 Envoyer la réservation via WhatsApp"
+};
 function toggleLang(){language=language==="id"?"en":language==="en"?"fr":"id";applyLang(language==="id"?idText:language==="en"?enText:frText)}
 function kirimWA(e){
 e.preventDefault();
@@ -350,7 +360,7 @@ const pesan=document.getElementById("pesan").value;
 const text=`Halo Gede Transport,%0A%0ANama: ${encodeURIComponent(nama)}%0ALayanan: ${encodeURIComponent(layanan)}%0ATanggal: ${encodeURIComponent(tanggal)}%0ATujuan: ${encodeURIComponent(tujuan)}%0APesan: ${encodeURIComponent(pesan)}`;
 window.open(`https://wa.me/62881037417775?text=${text}`,"_blank");
 }
-</script>
+ applyLang(idText);</script>
  <section style="padding:35px 18px;background:#f7fafc;color:#08243a">
 <h2 style="text-align:center;color:#08243a">PRICE LIST GEDE TRANSPORT BALI</h2>
 <p style="text-align:center">Munduk Bali – Private Transport & Tour</p>
